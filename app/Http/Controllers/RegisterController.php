@@ -11,7 +11,7 @@ class RegisterController extends Controller
 
         $request->validate([
             'name' => "required | unique:users,name",
-            'email' => "required | email | unique:users,email",
+            'email' => "required | email",
             'pincode' => "required | digits:6 | unique:users,password"
         ]);
         $user = new User();
